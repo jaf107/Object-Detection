@@ -43,5 +43,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you have any questions or suggestions, please feel free to contact us at [Jafar](mailto:bsse1109@iit.du.ac.bd).
 
 Happy coding! 🚀
-```
-
