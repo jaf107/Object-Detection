@@ -27,7 +27,7 @@ def draw_boxes(image, boxes, class_entities, scores):
 async def read_root():
     return {"message": "Hello, FastAPI!"}
 
-@app.get("/getversion")
+@app.get("/get-version")
 async def version():
     return {"1.0"}
 
