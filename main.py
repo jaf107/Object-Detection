@@ -23,6 +23,10 @@ def draw_boxes(image, boxes, class_entities, scores):
     # You should implement this function to draw boxes on the image
     pass
 
+@app.get("/")
+async def read_root():
+    return {"message": "Hello, FastAPI!"}
+
 @app.get("/getversion")
 async def version():
     return {"1.0"}
