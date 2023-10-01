@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, HTTPException
 import tensorflow_hub as hub
 import tensorflow as tf
 import time
@@ -64,7 +64,7 @@ async def object_detection(file: UploadFile):
             # "image_with_boxes": image_with_boxes.tolist()  # Convert to list for JSON compatibility
         }
     except Exception as e:
-        return {"error": str(e)}
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Run the FastAPI app
 if __name__ == "__main__":
