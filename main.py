@@ -76,9 +76,8 @@ async def object_detection(file: UploadFile=File(...)):
         print("after draw booxes")
         
         # Return the results as JSON
-        return {
-            "objects": result['detection_class_entities'].tolist()
-        }
+        return result['detection_class_entities'].tolist()
+        
     except Exception as e:
         return {"error": str(e)}
 
